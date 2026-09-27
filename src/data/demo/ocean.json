@@ -1,0 +1,13 @@
+{
+  "meta": {
+    "dataType": "DEMO",
+    "source": "INCOIS Ocean State Forecast Data (Sample)"
+  },
+  "oceanState": {
+    "currentSpeedKts": 0.8,
+    "currentDirectionDeg": 210,
+    "salinityPsu": 34.2,
+    "mixedLayerDepthM": 22.0,
+    "dissolvedOxygenMgL": 6.8
+  }
+}

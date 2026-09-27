@@ -1,0 +1,29 @@
+{
+  "type": "FeatureCollection",
+  "meta": {
+    "dataType": "DEMO",
+    "description": "Sample EEZ & Maritime Boundaries GeoJSON"
+  },
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "eez-in-01",
+        "name": "Indian EEZ Coastal Boundary Segment (Sample)",
+        "zoneType": "EEZ"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [80.1, 12.0],
+            [81.5, 12.0],
+            [81.5, 14.0],
+            [80.1, 14.0],
+            [80.1, 12.0]
+          ]
+        ]
+      }
+    }
+  ]
+}

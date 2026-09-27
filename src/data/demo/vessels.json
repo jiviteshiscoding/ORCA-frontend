@@ -1,0 +1,28 @@
+{
+  "meta": {
+    "dataType": "DEMO",
+    "source": "AIS / VMS Track Simulation Sample"
+  },
+  "vessels": [
+    {
+      "id": "ves-01",
+      "name": "Sea Pearl",
+      "type": "Mechanized Trawler",
+      "dataType": "DEMO",
+      "currentPosition": { "lat": 13.12, "lng": 80.35 },
+      "headingDeg": 120,
+      "speedKts": 8.4,
+      "lastUpdated": "2026-09-27T08:45:00Z"
+    },
+    {
+      "id": "ves-02",
+      "name": "Ocean Guardian",
+      "type": "Patrol Vessel",
+      "dataType": "DEMO",
+      "currentPosition": { "lat": 13.28, "lng": 80.48 },
+      "headingDeg": 45,
+      "speedKts": 14.2,
+      "lastUpdated": "2026-09-27T08:50:00Z"
+    }
+  ]
+}

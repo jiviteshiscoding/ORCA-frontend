@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="100%" height="100%">
+  <defs>
+    <linearGradient id="orcaGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#20B8D8" />
+      <stop offset="100%" stop-color="#073B66" />
+    </linearGradient>
+    <linearGradient id="waveGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#BFE8F3" />
+      <stop offset="100%" stop-color="#20B8D8" />
+    </linearGradient>
+  </defs>
+  <!-- Background Circle -->
+  <rect width="256" height="256" rx="56" fill="#073B66" />
+  
+  <!-- Marine Waves / Orca Fin Abstract -->
+  <path d="M 40,160 C 80,120 120,180 160,140 C 180,120 200,100 216,70 C 200,130 150,196 100,196 C 70,196 50,180 40,160 Z" fill="url(#orcaGrad)" />
+  <path d="M 40,180 C 80,150 120,195 160,165 C 190,145 205,120 216,95 C 200,155 150,210 100,210 C 70,210 50,195 40,180 Z" fill="url(#waveGrad)" opacity="0.8" />
+  
+  <!-- Node / Reasoning Dots -->
+  <circle cx="160" cy="70" r="8" fill="#20B8D8" />
+  <circle cx="200" cy="100" r="6" fill="#BFE8F3" />
+  <circle cx="120" cy="110" r="6" fill="#F8FCFD" opacity="0.9" />
+  <path d="M 120,110 L 160,70 L 200,100" stroke="#BFE8F3" stroke-width="2" stroke-dasharray="4 4" fill="none" opacity="0.6" />
+</svg>

@@ -1,0 +1,39 @@
+{
+  "meta": {
+    "dataType": "DEMO",
+    "source": "INCOIS PFZ Model Simulation (Sample)",
+    "generatedAt": "2026-09-27T06:00:00Z"
+  },
+  "zones": [
+    {
+      "id": "pfz-01",
+      "dataType": "DEMO",
+      "title": "Chennai Offshore PFZ Zone Alpha",
+      "coordinates": [
+        [13.25, 80.45],
+        [13.35, 80.55],
+        [13.20, 80.60],
+        [13.15, 80.50]
+      ],
+      "chlorophyllMgM3": 1.45,
+      "sstC": 28.2,
+      "confidenceScore": 88,
+      "validUntil": "2026-09-28T18:00:00Z"
+    },
+    {
+      "id": "pfz-02",
+      "dataType": "DEMO",
+      "title": "Mahabalipuram Coastal Zone Beta",
+      "coordinates": [
+        [12.55, 80.30],
+        [12.65, 80.40],
+        [12.50, 80.45],
+        [12.45, 80.35]
+      ],
+      "chlorophyllMgM3": 1.82,
+      "sstC": 27.9,
+      "confidenceScore": 92,
+      "validUntil": "2026-09-28T18:00:00Z"
+    }
+  ]
+}

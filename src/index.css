@@ -1,0 +1,139 @@
+@import 'leaflet/dist/leaflet.css';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --orca-env: #BFE8F3;
+  --orca-ice: #EAF8FB;
+  --orca-white: #F8FCFD;
+  --orca-navy: #073B66;
+  --orca-deep: #062B4A;
+  --orca-cyan: #20B8D8;
+  --orca-blue: #1685C7;
+
+  --decision-go: #10B981;
+  --decision-caution: #F59E0B;
+  --decision-avoid: #EF4444;
+  --decision-unknown: #6B7280;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  background-color: var(--orca-white);
+  color: var(--orca-deep);
+  min-height: 100vh;
+  font-size: 14px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Outfit', 'Inter', sans-serif;
+}
+
+/* Custom scrollbars */
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+::-webkit-scrollbar-track {
+  background: #EAF8FB;
+}
+::-webkit-scrollbar-thumb {
+  background: #20B8D8;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #1685C7;
+}
+
+/* Phase 8 Motion & Keyframe System */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes drawerSlideIn {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes pulseGlow {
+  0%, 100% {
+    box-shadow: 0 0 0 0 rgba(32, 184, 216, 0.4);
+  }
+  50% {
+    box-shadow: 0 0 0 6px rgba(32, 184, 216, 0);
+  }
+}
+
+@keyframes connectorFlow {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 100% 50%;
+  }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.25s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.animate-drawer-in {
+  animation: drawerSlideIn 0.3s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.orca-card-hover {
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.orca-card-hover:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px -3px rgba(7, 59, 102, 0.08);
+  border-color: rgba(32, 184, 216, 0.5);
+}
+
+.agent-pulse-ring {
+  animation: pulseGlow 2s infinite;
+}
+
+.flow-connector-line {
+  background: linear-gradient(90deg, #20B8D8, #10B981, #20B8D8);
+  background-size: 200% 200%;
+  animation: connectorFlow 3s linear infinite;
+}
+
+/* Progressive Disclosure Utility Classes */
+.expandable-panel {
+  transition: max-height 0.3s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.25s ease-out;
+  overflow: hidden;
+}
+
+/* Accessibility: Respect Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+  *, ::before, ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+

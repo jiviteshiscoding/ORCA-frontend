@@ -1,0 +1,87 @@
+import { RoleConfig, RoleId } from '../types/role';
+
+export const ORCA_ROLES: Record<RoleId, RoleConfig> = {
+  fisher: {
+    id: 'fisher',
+    displayName: 'Fisher / Vessel Operator',
+    tagline: 'Operational fishing advisories, PFZ zones, and sea safety context',
+    shortDescription: 'Tailored for active artisanal and commercial boat captains seeking safety and high-probability fishing zones.',
+    iconIdentifier: 'Anchor',
+    accentColor: '#20B8D8',
+    baseRoute: '/fisher',
+    navigation: [
+      { label: 'Command Center', path: '/fisher/dashboard', icon: 'LayoutDashboard' },
+      { label: 'Marine Map', path: '/fisher/map', icon: 'Map' },
+      { label: 'Ask ORCA', path: '/fisher/ask', icon: 'MessageSquareText' },
+      { label: 'Mission Planner', path: '/fisher/mission', icon: 'Navigation' },
+      { label: 'Alerts', path: '/fisher/alerts', icon: 'Bell' },
+      { label: 'Profile & Vessel', path: '/fisher/profile', icon: 'User' },
+    ],
+  },
+  operator: {
+    id: 'operator',
+    displayName: 'Maritime Operator',
+    tagline: 'Fleet coordination, harbor traffic, and operational route safety',
+    shortDescription: 'For port authorities, vessel traffic management, and commercial fleet operators overseeing multiple maritime units.',
+    iconIdentifier: 'Ship',
+    accentColor: '#1685C7',
+    baseRoute: '/operator',
+    navigation: [
+      { label: 'Fleet Overview', path: '/operator/dashboard', icon: 'LayoutDashboard' },
+      { label: 'Spatial Fleet Map', path: '/operator/map', icon: 'Map' },
+      { label: 'Active Missions', path: '/operator/missions', icon: 'Compass' },
+      { label: 'Fleet Alerts', path: '/operator/alerts', icon: 'Bell' },
+      { label: 'Operator Profile', path: '/operator/profile', icon: 'User' },
+    ],
+  },
+  researcher: {
+    id: 'researcher',
+    displayName: 'Marine Researcher',
+    tagline: 'Oceanographic data correlation, agent trace logs, and scientific evidence',
+    shortDescription: 'Designed for oceanographers and marine scientists inspecting multi-layer datasets, SST anomalies, and model outputs.',
+    iconIdentifier: 'FlaskConical',
+    accentColor: '#8B5CF6',
+    baseRoute: '/researcher',
+    navigation: [
+      { label: 'Research Lab', path: '/researcher/dashboard', icon: 'LayoutDashboard' },
+      { label: 'Ocean GIS Map', path: '/researcher/map', icon: 'Map' },
+      { label: 'Data Analysis', path: '/researcher/analysis', icon: 'LineChart' },
+      { label: 'Evidence Vault', path: '/researcher/evidence', icon: 'FileSearch' },
+      { label: 'Researcher Profile', path: '/researcher/profile', icon: 'User' },
+    ],
+  },
+  disaster: {
+    id: 'disaster',
+    displayName: 'Disaster Management Authority',
+    tagline: 'Early warning, cyclone track prediction, and coastal evacuation context',
+    shortDescription: 'Tailored for emergency response agencies, coast guard coordinators, and disaster mitigation teams.',
+    iconIdentifier: 'ShieldAlert',
+    accentColor: '#F97316',
+    baseRoute: '/disaster',
+    navigation: [
+      { label: 'Response Room', path: '/disaster/dashboard', icon: 'LayoutDashboard' },
+      { label: 'Hazard & Track Map', path: '/disaster/map', icon: 'Map' },
+      { label: 'Active Hazards', path: '/disaster/hazards', icon: 'TriangleAlert' },
+      { label: 'Emergency Alerts', path: '/disaster/alerts', icon: 'BellRing' },
+      { label: 'Authority Profile', path: '/disaster/profile', icon: 'User' },
+    ],
+  },
+  environment: {
+    id: 'environment',
+    displayName: 'Environmental / Marine Analyst',
+    tagline: 'Ecosystem health, MPAs, coral reef stress, and sustainability metrics',
+    shortDescription: 'For conservationists, marine park officers, and environmental policy experts managing marine protected areas.',
+    iconIdentifier: 'Leaf',
+    accentColor: '#10B981',
+    baseRoute: '/environment',
+    navigation: [
+      { label: 'Ecosystem Desk', path: '/environment/dashboard', icon: 'LayoutDashboard' },
+      { label: 'Bio-Geospatial Map', path: '/environment/map', icon: 'Map' },
+      { label: 'Impact Analysis', path: '/environment/analysis', icon: 'BarChart3' },
+      { label: 'Eco Evidence', path: '/environment/evidence', icon: 'FileText' },
+      { label: 'Analyst Profile', path: '/environment/profile', icon: 'User' },
+    ],
+  },
+};
+
+export const ALL_ROLES_LIST = Object.values(ORCA_ROLES);
